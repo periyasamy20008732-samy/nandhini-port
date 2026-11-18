@@ -2,7 +2,8 @@ FROM php:8.3-apache
 
 RUN apt-get update && apt-get install -y \
     git unzip libzip-dev \
-    && docker-php-ext-install pdo_mysql zip \
+    libpq-dev \
+    && docker-php-ext-install pdo_mysql pdo_pgsql zip \ 
     && a2enmod rewrite \
     && rm -rf /var/lib/apt/lists/*
 
@@ -27,7 +28,7 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader \
     && chown -R www-data:www-data storage bootstrap/cache
 
-RUN docker-php-ext-install pdo_pgsql
+
 
 EXPOSE 80
 
