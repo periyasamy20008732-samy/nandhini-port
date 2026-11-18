@@ -1,0 +1,100 @@
+:root{--bg:#f8fafc;--surface:#fff;--ink:#0f172a;--muted:#475569;--line:#e2e8f0;--brand:#4f46e5;--brand-dark:#3730a3;--tint:#eef2ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.7 'Plus Jakarta Sans',system-ui,sans-serif}
+h1,h2,h3{line-height:1.2;margin:0}
+p{margin:0}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.wrap{max-width:68rem;margin-inline:auto;padding-inline:1.25rem}
+
+.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-block:.8rem}
+.brand{font-weight:800;text-decoration:none}
+nav{display:flex;gap:.3rem;flex-wrap:wrap;align-items:center}
+nav a{text-decoration:none;color:var(--muted);font-weight:500;padding:.4rem .8rem;border-radius:8px}
+nav a:hover{color:var(--brand);background:var(--tint)}
+nav a.cta{background:var(--brand);color:#fff}
+nav a.cta:hover{background:var(--brand-dark)}
+
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:3rem;align-items:center;padding-block:4.5rem 3rem}
+.hello{color:var(--brand);font-weight:700;margin-bottom:.4rem}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.02em}
+.role{color:var(--muted);font-weight:500;margin:.6rem 0 1.2rem}
+.lead{max-width:34rem;color:var(--muted);font-size:1.1rem}
+.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.8rem}
+.btn{display:inline-block;font:700 1rem 'Plus Jakarta Sans',sans-serif;text-decoration:none;padding:.8rem 1.6rem;border-radius:10px;border:2px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--brand);color:var(--brand)}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn.primary:hover{background:var(--brand-dark);border-color:var(--brand-dark);color:#fff}
+.photo{width:100%;max-width:22rem;justify-self:center;aspect-ratio:1;object-fit:cover;border-radius:50%;border:6px solid var(--surface);box-shadow:0 20px 50px rgba(79,70,229,.25)}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1rem;padding-bottom:2rem}
+.stats div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.4rem}
+.stats strong{display:block;font-size:2rem;font-weight:800;color:var(--brand)}
+.stats span{color:var(--muted)}
+
+.section{padding-block:3.2rem}
+.section h2{font-size:1.8rem;font-weight:800;margin-bottom:1.5rem}
+.section h2::after{content:"";display:block;width:3rem;height:4px;background:var(--brand);border-radius:4px;margin-top:.5rem}
+.about{max-width:46rem;color:var(--muted);font-size:1.1rem}
+
+.search input{width:100%;max-width:30rem;font:inherit;padding:.8rem 1rem;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.count{min-height:1.5rem;color:var(--muted);margin:.5rem 0 1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(19rem,1fr));gap:1.4rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:box-shadow .2s}
+.card:hover{box-shadow:0 12px 30px rgba(15,23,42,.1)}
+.card[hidden]{display:none}
+.card img{width:100%;aspect-ratio:600/340;object-fit:cover}
+.card-body{padding:1.2rem 1.3rem 1.4rem}
+.card h3{font-size:1.15rem;margin-bottom:.4rem}
+.card p{color:var(--muted);margin-bottom:.9rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0;margin:0}
+.tags li{background:var(--tint);color:var(--brand-dark);font-size:.85rem;font-weight:500;padding:.1rem .7rem;border-radius:99px}
+.empty{color:var(--muted)}
+
+.job{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--brand);border-radius:14px;padding:1.5rem 1.7rem}
+.job-head,.edu{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.job h3{font-size:1.15rem}
+.job-head p,.edu p{color:var(--muted)}
+.period,.edu span{color:var(--brand);font-weight:700}
+.job ul{max-width:52rem;padding-left:1.2rem;margin:1rem 0 0}
+.job li{margin-bottom:.5rem}
+
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
+.skill{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.4rem}
+.skill h3{font-size:1rem;margin-bottom:.7rem}
+.edu{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1rem 1.4rem;margin-bottom:.8rem}
+.langs{color:var(--muted);margin-top:1rem}
+
+.contact form{display:grid;gap:1rem;max-width:34rem;margin-top:1.2rem}
+.contact label{display:grid;gap:.3rem;font-weight:500}
+.contact input,.contact textarea{font:inherit;padding:.75rem;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.contact .btn{justify-self:start}
+.ok{background:#dcfce7;padding:.8rem 1rem;border-radius:10px;max-width:34rem;margin-top:1rem}
+.err{color:#b91c1c}
+footer{padding-block:2rem;color:var(--muted);border-top:1px solid var(--line)}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-block:2.5rem}.photo{order:-1;max-width:14rem;justify-self:start}}
+
+/* multi-page additions */
+nav a.active{color:var(--brand);background:var(--tint)}
+nav a.cta.active{background:var(--brand-dark);color:#fff}
+.card h3 a{text-decoration:none}
+.card h3 a:hover{color:var(--brand)}
+.more{margin-top:1.8rem}
+.about-grid{display:grid;grid-template-columns:14rem 1fr;gap:2rem;align-items:center}
+.photo.small{max-width:14rem;box-shadow:0 10px 30px rgba(79,70,229,.2)}
+.detail h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin:.8rem 0 1.5rem}
+.detail img{width:100%;max-width:40rem;border-radius:14px;margin-bottom:1.5rem}
+.detail h3{margin:1.5rem 0 .7rem}
+.back{color:var(--brand);font-weight:700;text-decoration:none}
+.pager{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2.5rem}
+footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+@media (max-width:760px){.about-grid{grid-template-columns:1fr}}
+
+/* sticky footer: always at the bottom, text centered */
+body{display:flex;flex-direction:column;min-height:100vh}
+main{flex:1 0 auto;width:100%}
+footer{flex-shrink:0;width:100%;margin-top:3rem;justify-content:center;align-items:center;text-align:center;gap:.4rem 1.5rem}
