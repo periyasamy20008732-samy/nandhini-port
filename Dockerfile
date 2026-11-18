@@ -27,6 +27,8 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader \
     && chown -R www-data:www-data storage bootstrap/cache
 
+RUN docker-php-ext-install pdo_pgsql
+
 EXPOSE 80
 
 CMD ["apache2-foreground"]
