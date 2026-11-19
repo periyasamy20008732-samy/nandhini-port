@@ -8,7 +8,9 @@ return [
     'email' => 'nambinandhini001@gmail.com',
     'phone' => '9025772487',
     'photo' => 'images/profile.png', // replace with your photo, e.g. images/profile.jpg
-    'github' => 'https://github.com/',
+    'github' => 'https://github.com/NambiNandhini',
+    'linkedin' => 'https://www.linkedin.com/in/nambi-nandhini',
+    'linkedin-name' => 'Nambi Nandhini',
     'summary' => 'I build secure, scalable backends in Laravel, CodeIgniter and Core PHP for government and university projects: REST APIs, MySQL design, payment gateways and Apache Solr search.',
     'about' => 'PHP Laravel developer with 3+ years of experience delivering full-stack backend solutions. I enjoy optimizing database performance, working in agile teams, and turning messy requirements into reliable systems.',
 

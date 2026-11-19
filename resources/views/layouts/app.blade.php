@@ -14,7 +14,7 @@
 <body>
 <header class="top">
     <div class="wrap bar">
-        <a href="{{ route('home') }}" class="brand">{{ config('portfolio.name') }}</a>
+        <a href="{{ config('portfolio.linkedin') }}" target="_blank" style="text-decoration: none;"> <i class="fa-brands fa-linkedin"></i> {{ config('portfolio.linkedin-name') }}</a>
         <nav>
             @foreach ([['home','Home'],['about','About'],['projects','Projects'],['experience','Experience'],['skills','Skills']] as [$r, $label])
                 <a href="{{ route($r) }}" @class(['active' => request()->routeIs($r) || ($r === 'projects' && request()->routeIs('projects.*'))])>{{ $label }}</a>
@@ -27,9 +27,10 @@
 <main>@yield('content')</main>
 
 <footer class="wrap">
-    <span><i class="fa-solid fa-user"></i> {{ config('portfolio.name') }}</span>
-    <span><i class="fa-solid fa-envelope"></i> {{ config('portfolio.email') }}</span>
-    <span><i class="fa-solid fa-phone"></i> {{ config('portfolio.phone') }}</span>
+    <span><a href="{{ config('portfolio.github') }}" target="_blank" style="text-decoration: none;"><i class="fa-brands fa-github"></i> GitHub</a></span>
+    <span><a href="mailto:{{ config('portfolio.email') }}" style="text-decoration: none;"><i class="fa-solid fa-envelope"></i> {{ config('portfolio.email') }}</a></span>
+    <span><a href="tel:{{ config('portfolio.phone') }}" style="text-decoration: none;"><i class="fa-solid fa-phone"></i> {{ config('portfolio.phone') }}</a></span>
+    <span><a href="{{ config('portfolio.linkedin') }}" target="_blank" style="text-decoration: none;"><i class="fa-brands fa-linkedin"></i> {{ config('portfolio.linkedin-name') }}</a></span>
 </footer>
 <script src="{{ asset('js/portfolio.js') }}" defer></script>
 </body>
